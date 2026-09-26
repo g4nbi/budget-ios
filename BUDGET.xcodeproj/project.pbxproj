@@ -99,3 +99,579 @@
 		0000000000000000000000B4 /* FinanceMonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMonthTests.swift; sourceTree = "<group>"; };
 		0000000000000000000000B6 /* ExportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000000000000000001E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000001F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000190 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000064 /* BUDGETApp.swift */,
+				000000000000000000000066 /* AppRootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		000000000000000000000193 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000068 /* Enums.swift */,
+				00000000000000000000006A /* Account.swift */,
+				00000000000000000000006C /* CategoryItem.swift */,
+				00000000000000000000006E /* MoneyTransaction.swift */,
+				000000000000000000000070 /* BudgetPlan.swift */,
+				000000000000000000000072 /* FinancialGoal.swift */,
+				000000000000000000000074 /* RecurringRule.swift */,
+				000000000000000000000076 /* ReservedMoney.swift */,
+				000000000000000000000078 /* UpcomingBill.swift */,
+				00000000000000000000007A /* ExpectedIncome.swift */,
+				00000000000000000000007C /* FinanceSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		000000000000000000000194 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000007E /* FinanceMonth.swift */,
+				000000000000000000000080 /* MoneyCalculator.swift */,
+				000000000000000000000082 /* KeychainService.swift */,
+				000000000000000000000084 /* GeminiService.swift */,
+				000000000000000000000086 /* ExportService.swift */,
+				000000000000000000000088 /* CategoryCatalog.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		000000000000000000000195 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000008A /* AppContainer.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		000000000000000000000196 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000008C /* DesignSystem.swift */,
+				00000000000000000000008E /* CurrencyFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		000000000000000000000191 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000090 /* SharedViews.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		000000000000000000000197 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000096 /* AccountListView.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		000000000000000000000198 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A6 /* AnalyticsView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		000000000000000000000199 /* Bills */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A0 /* BillListView.swift */,
+			);
+			path = Bills;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019A /* Budgets */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000009C /* BudgetListView.swift */,
+			);
+			path = Budgets;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019B /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000009E /* GoalListView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000094 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000092 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019E /* Recurring */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A4 /* RecurringListView.swift */,
+			);
+			path = Recurring;
+			sourceTree = "<group>";
+		};
+		00000000000000000000019F /* Reservations */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A2 /* ReservationListView.swift */,
+			);
+			path = Reservations;
+			sourceTree = "<group>";
+		};
+		0000000000000000000001A0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A8 /* SettingsView.swift */,
+				0000000000000000000000AA /* CategoryListView.swift */,
+				0000000000000000000000AC /* ExportView.swift */,
+				0000000000000000000000AE /* DeleteAllDataView.swift */,
+				0000000000000000000000B0 /* GeminiSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0000000000000000000001A1 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000098 /* TransactionListView.swift */,
+				00000000000000000000009A /* TransactionEditorView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		000000000000000000000192 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000197 /* Accounts */,
+				000000000000000000000198 /* Analytics */,
+				000000000000000000000199 /* Bills */,
+				00000000000000000000019A /* Budgets */,
+				00000000000000000000019B /* Goals */,
+				00000000000000000000019C /* Home */,
+				00000000000000000000019D /* Onboarding */,
+				00000000000000000000019E /* Recurring */,
+				00000000000000000000019F /* Reservations */,
+				0000000000000000000001A0 /* Settings */,
+				0000000000000000000001A1 /* Transactions */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		000000000000000000000006 /* BUDGET */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000190 /* App */,
+				000000000000000000000193 /* Models */,
+				000000000000000000000194 /* Services */,
+				000000000000000000000195 /* Store */,
+				000000000000000000000196 /* Utilities */,
+				000000000000000000000191 /* Components */,
+				000000000000000000000192 /* Features */,
+				00000000000000000000000D /* Assets.xcassets */,
+			);
+			path = BUDGET;
+			sourceTree = "<group>";
+		};
+		000000000000000000000007 /* BUDGETTests */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000B2 /* MoneyCalculatorTests.swift */,
+				0000000000000000000000B4 /* FinanceMonthTests.swift */,
+				0000000000000000000000B6 /* ExportServiceTests.swift */,
+			);
+			path = BUDGETTests;
+			sourceTree = "<group>";
+		};
+		000000000000000000000008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000004 /* BUDGET.app */,
+				000000000000000000000005 /* BUDGETTests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000009 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000006 /* BUDGET */,
+				000000000000000000000007 /* BUDGETTests */,
+				000000000000000000000008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000002 /* BUDGET */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000010 /* Build configuration list for PBXNativeTarget "BUDGET" */;
+			buildPhases = (
+				000000000000000000000028 /* Sources */,
+				00000000000000000000001E /* Frameworks */,
+				000000000000000000000029 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BUDGET;
+			productName = BUDGET;
+			productReference = 000000000000000000000004 /* BUDGET.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000003 /* BUDGETTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000011 /* Build configuration list for PBXNativeTarget "BUDGETTests" */;
+			buildPhases = (
+				00000000000000000000002A /* Sources */,
+				00000000000000000000001F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000000000000000032 /* PBXTargetDependency */,
+			);
+			name = BUDGETTests;
+			productName = BUDGETTests;
+			productReference = 000000000000000000000005 /* BUDGETTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					000000000000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					000000000000000000000003 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 000000000000000000000002;
+					};
+				};
+			};
+			buildConfigurationList = 00000000000000000000000F /* Build configuration list for PBXProject "BUDGET" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = id;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				id,
+				Base,
+			);
+			mainGroup = 000000000000000000000009 /* root */;
+			productRefGroup = 000000000000000000000008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000002 /* BUDGET */,
+				000000000000000000000003 /* BUDGETTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000029 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000000E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000065 /* BUDGETApp.swift in Sources */,
+				000000000000000000000067 /* AppRootView.swift in Sources */,
+				000000000000000000000069 /* Enums.swift in Sources */,
+				00000000000000000000006B /* Account.swift in Sources */,
+				00000000000000000000006D /* CategoryItem.swift in Sources */,
+				00000000000000000000006F /* MoneyTransaction.swift in Sources */,
+				000000000000000000000071 /* BudgetPlan.swift in Sources */,
+				000000000000000000000073 /* FinancialGoal.swift in Sources */,
+				000000000000000000000075 /* RecurringRule.swift in Sources */,
+				000000000000000000000077 /* ReservedMoney.swift in Sources */,
+				000000000000000000000079 /* UpcomingBill.swift in Sources */,
+				00000000000000000000007B /* ExpectedIncome.swift in Sources */,
+				00000000000000000000007D /* FinanceSettings.swift in Sources */,
+				00000000000000000000007F /* FinanceMonth.swift in Sources */,
+				000000000000000000000081 /* MoneyCalculator.swift in Sources */,
+				000000000000000000000083 /* KeychainService.swift in Sources */,
+				000000000000000000000085 /* GeminiService.swift in Sources */,
+				000000000000000000000087 /* ExportService.swift in Sources */,
+				000000000000000000000089 /* CategoryCatalog.swift in Sources */,
+				00000000000000000000008B /* AppContainer.swift in Sources */,
+				00000000000000000000008D /* DesignSystem.swift in Sources */,
+				00000000000000000000008F /* CurrencyFormatter.swift in Sources */,
+				000000000000000000000091 /* SharedViews.swift in Sources */,
+				000000000000000000000093 /* OnboardingView.swift in Sources */,
+				000000000000000000000095 /* HomeView.swift in Sources */,
+				000000000000000000000097 /* AccountListView.swift in Sources */,
+				000000000000000000000099 /* TransactionListView.swift in Sources */,
+				00000000000000000000009B /* TransactionEditorView.swift in Sources */,
+				00000000000000000000009D /* BudgetListView.swift in Sources */,
+				00000000000000000000009F /* GoalListView.swift in Sources */,
+				0000000000000000000000A1 /* BillListView.swift in Sources */,
+				0000000000000000000000A3 /* ReservationListView.swift in Sources */,
+				0000000000000000000000A5 /* RecurringListView.swift in Sources */,
+				0000000000000000000000A7 /* AnalyticsView.swift in Sources */,
+				0000000000000000000000A9 /* SettingsView.swift in Sources */,
+				0000000000000000000000AB /* CategoryListView.swift in Sources */,
+				0000000000000000000000AD /* ExportView.swift in Sources */,
+				0000000000000000000000AF /* DeleteAllDataView.swift in Sources */,
+				0000000000000000000000B1 /* GeminiSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000002A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000000000000000000B3 /* MoneyCalculatorTests.swift in Sources */,
+				0000000000000000000000B5 /* FinanceMonthTests.swift in Sources */,
+				0000000000000000000000B7 /* ExportServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000000000000000032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000002 /* BUDGET */;
+			targetProxy = 000000000000000000000033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000000000000000033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000002;
+			remoteInfo = BUDGET;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BUDGET;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.budget.local;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		000000000000000000000015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BUDGET;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.budget.local;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		000000000000000000000016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.budget.local.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BUDGET.app/BUDGET";
+			};
+			name = Debug;
+		};
+		000000000000000000000017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.budget.local.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BUDGET.app/BUDGET";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000000000000000000F /* Build configuration list for PBXProject "BUDGET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000012 /* Debug */,
+				000000000000000000000013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000010 /* Build configuration list for PBXNativeTarget "BUDGET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000014 /* Debug */,
+				000000000000000000000015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000011 /* Build configuration list for PBXNativeTarget "BUDGETTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000016 /* Debug */,
+				000000000000000000000017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
