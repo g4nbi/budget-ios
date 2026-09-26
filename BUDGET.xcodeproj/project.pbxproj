@@ -51,3 +51,51 @@
 		0000000000000000000000B5 /* FinanceMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B4 /* FinanceMonthTests.swift */; };
 		0000000000000000000000B7 /* ExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B6 /* ExportServiceTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000004 /* BUDGET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUDGET.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000005 /* BUDGETTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BUDGETTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000064 /* BUDGETApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDGETApp.swift; sourceTree = "<group>"; };
+		000000000000000000000066 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		000000000000000000000068 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		00000000000000000000006A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		00000000000000000000006C /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		00000000000000000000006E /* MoneyTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTransaction.swift; sourceTree = "<group>"; };
+		000000000000000000000070 /* BudgetPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPlan.swift; sourceTree = "<group>"; };
+		000000000000000000000072 /* FinancialGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialGoal.swift; sourceTree = "<group>"; };
+		000000000000000000000074 /* RecurringRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringRule.swift; sourceTree = "<group>"; };
+		000000000000000000000076 /* ReservedMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedMoney.swift; sourceTree = "<group>"; };
+		000000000000000000000078 /* UpcomingBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingBill.swift; sourceTree = "<group>"; };
+		00000000000000000000007A /* ExpectedIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectedIncome.swift; sourceTree = "<group>"; };
+		00000000000000000000007C /* FinanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceSettings.swift; sourceTree = "<group>"; };
+		00000000000000000000007E /* FinanceMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMonth.swift; sourceTree = "<group>"; };
+		000000000000000000000080 /* MoneyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCalculator.swift; sourceTree = "<group>"; };
+		000000000000000000000082 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		000000000000000000000084 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		000000000000000000000086 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		000000000000000000000088 /* CategoryCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCatalog.swift; sourceTree = "<group>"; };
+		00000000000000000000008A /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		00000000000000000000008C /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		00000000000000000000008E /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		000000000000000000000090 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
+		000000000000000000000092 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		000000000000000000000094 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		000000000000000000000096 /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
+		000000000000000000000098 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		00000000000000000000009A /* TransactionEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditorView.swift; sourceTree = "<group>"; };
+		00000000000000000000009C /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
+		00000000000000000000009E /* GoalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListView.swift; sourceTree = "<group>"; };
+		0000000000000000000000A0 /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
+		0000000000000000000000A2 /* ReservationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListView.swift; sourceTree = "<group>"; };
+		0000000000000000000000A4 /* RecurringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringListView.swift; sourceTree = "<group>"; };
+		0000000000000000000000A6 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		0000000000000000000000A8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0000000000000000000000AA /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		0000000000000000000000AC /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		0000000000000000000000AE /* DeleteAllDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllDataView.swift; sourceTree = "<group>"; };
+		0000000000000000000000B0 /* GeminiSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiSettingsView.swift; sourceTree = "<group>"; };
+		0000000000000000000000B2 /* MoneyCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCalculatorTests.swift; sourceTree = "<group>"; };
+		0000000000000000000000B4 /* FinanceMonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMonthTests.swift; sourceTree = "<group>"; };
+		0000000000000000000000B6 /* ExportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportServiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
