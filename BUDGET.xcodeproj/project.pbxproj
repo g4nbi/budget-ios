@@ -1,0 +1,53 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000065 /* BUDGETApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000064 /* BUDGETApp.swift */; };
+		000000000000000000000067 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000066 /* AppRootView.swift */; };
+		000000000000000000000069 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* Enums.swift */; };
+		00000000000000000000006B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* Account.swift */; };
+		00000000000000000000006D /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* CategoryItem.swift */; };
+		00000000000000000000006F /* MoneyTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* MoneyTransaction.swift */; };
+		000000000000000000000071 /* BudgetPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000070 /* BudgetPlan.swift */; };
+		000000000000000000000073 /* FinancialGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000072 /* FinancialGoal.swift */; };
+		000000000000000000000075 /* RecurringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000074 /* RecurringRule.swift */; };
+		000000000000000000000077 /* ReservedMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* ReservedMoney.swift */; };
+		000000000000000000000079 /* UpcomingBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* UpcomingBill.swift */; };
+		00000000000000000000007B /* ExpectedIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* ExpectedIncome.swift */; };
+		00000000000000000000007D /* FinanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* FinanceSettings.swift */; };
+		00000000000000000000007F /* FinanceMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007E /* FinanceMonth.swift */; };
+		000000000000000000000081 /* MoneyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000080 /* MoneyCalculator.swift */; };
+		000000000000000000000083 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000082 /* KeychainService.swift */; };
+		000000000000000000000085 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* GeminiService.swift */; };
+		000000000000000000000087 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000086 /* ExportService.swift */; };
+		000000000000000000000089 /* CategoryCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000088 /* CategoryCatalog.swift */; };
+		00000000000000000000008B /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008A /* AppContainer.swift */; };
+		00000000000000000000008D /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* DesignSystem.swift */; };
+		00000000000000000000008F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* CurrencyFormatter.swift */; };
+		000000000000000000000091 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* SharedViews.swift */; };
+		000000000000000000000093 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000092 /* OnboardingView.swift */; };
+		000000000000000000000095 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000094 /* HomeView.swift */; };
+		000000000000000000000097 /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000096 /* AccountListView.swift */; };
+		000000000000000000000099 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000098 /* TransactionListView.swift */; };
+		00000000000000000000009B /* TransactionEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009A /* TransactionEditorView.swift */; };
+		00000000000000000000009D /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009C /* BudgetListView.swift */; };
+		00000000000000000000009F /* GoalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009E /* GoalListView.swift */; };
+		0000000000000000000000A1 /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A0 /* BillListView.swift */; };
+		0000000000000000000000A3 /* ReservationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A2 /* ReservationListView.swift */; };
+		0000000000000000000000A5 /* RecurringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A4 /* RecurringListView.swift */; };
+		0000000000000000000000A7 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A6 /* AnalyticsView.swift */; };
+		0000000000000000000000A9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A8 /* SettingsView.swift */; };
+		0000000000000000000000AB /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AA /* CategoryListView.swift */; };
+		0000000000000000000000AD /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AC /* ExportView.swift */; };
+		0000000000000000000000AF /* DeleteAllDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AE /* DeleteAllDataView.swift */; };
+		0000000000000000000000B1 /* GeminiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B0 /* GeminiSettingsView.swift */; };
+		00000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* Assets.xcassets */; };
+		0000000000000000000000B3 /* MoneyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B2 /* MoneyCalculatorTests.swift */; };
+		0000000000000000000000B5 /* FinanceMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B4 /* FinanceMonthTests.swift */; };
+		0000000000000000000000B7 /* ExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B6 /* ExportServiceTests.swift */; };
+/* End PBXBuildFile section */
