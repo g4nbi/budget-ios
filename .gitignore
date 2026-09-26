@@ -1,0 +1,41 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+xcuserdata/
+*.playground
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift PM
+.swiftpm/
+.build/
+Packages/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Secrets — never commit keys
+*.p8
+*.p12
+*.mobileprovision
+*.cer
+*.certSigningRequest
+Secrets.plist
+.env
+.env.*
+
+# IDEs
+.idea/
+.vscode/
+*.swp
