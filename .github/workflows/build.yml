@@ -1,0 +1,86 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-test-ipa:
+    runs-on: macos-15
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode_16.3.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+          xcode-select -p
+
+      - name: Show destinations
+        run: xcodebuild -project BUDGET.xcodeproj -scheme BUDGET -showdestinations || true
+
+      - name: Build for testing
+        run: |
+          xcodebuild \
+            -project BUDGET.xcodeproj \
+            -scheme BUDGET \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build-for-testing
+
+      - name: Run XCTest
+        run: |
+          xcodebuild \
+            -project BUDGET.xcodeproj \
+            -scheme BUDGET \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            test
+
+      - name: Build generic iOS device (unsigned)
+        run: |
+          xcodebuild \
+            -project BUDGET.xcodeproj \
+            -scheme BUDGET \
+            -destination 'generic/platform=iOS' \
+            -configuration Release \
+            -derivedDataPath derived \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            PRODUCT_BUNDLE_IDENTIFIER=app.budget.local \
+            build
+
+      - name: Package unsigned IPA
+        run: |
+          set -euo pipefail
+          APP_PATH=$(find derived -name 'BUDGET.app' -type d | head -n 1)
+          echo "Found app: $APP_PATH"
+          test -d "$APP_PATH"
+          rm -rf Payload
+          mkdir Payload
+          cp -R "$APP_PATH" Payload/BUDGET.app
+          zip -r BUDGET-unsigned.ipa Payload
+          ls -lh BUDGET-unsigned.ipa
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: BUDGET-unsigned-ipa
+          path: BUDGET-unsigned.ipa
+          if-no-files-found: error
