@@ -12,24 +12,49 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
+      - name: Select Xcode 16.4
         run: |
-          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || \
-          sudo xcode-select -s /Applications/Xcode_16.3.app/Contents/Developer || \
-          sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer || \
-          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
           xcodebuild -version
           xcode-select -p
 
-      - name: Show destinations
-        run: xcodebuild -project BUDGET.xcodeproj -scheme BUDGET -showdestinations || true
+      - name: Probe simulator runtimes and devices
+        run: |
+          xcodebuild -version
+          xcrun simctl list runtimes
+          xcrun simctl list devices available
+          xcodebuild -project BUDGET.xcodeproj -scheme BUDGET -showdestinations || true
+
+      - name: Select available iPhone simulator
+        run: |
+          set -euo pipefail
+          DEVICE_ID=$(xcrun simctl list devices available | \
+            grep -E 'iPhone' | \
+            grep -v 'unavailable' | \
+            head -1 | \
+            grep -oE '[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}' | \
+            head -1)
+
+          if [ -z "$DEVICE_ID" ]; then
+            echo "No available iPhone simulator found."
+            xcrun simctl list devices available
+            exit 1
+          fi
+
+          echo "Using simulator: $DEVICE_ID"
+          echo "SIMULATOR_ID=$DEVICE_ID" >> "$GITHUB_ENV"
+
+      - name: Boot selected simulator
+        run: |
+          xcrun simctl boot "$SIMULATOR_ID" || true
+          xcrun simctl bootstatus "$SIMULATOR_ID" -b
 
       - name: Build for testing
         run: |
           xcodebuild \
             -project BUDGET.xcodeproj \
             -scheme BUDGET \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
@@ -41,7 +66,7 @@ jobs:
           xcodebuild \
             -project BUDGET.xcodeproj \
             -scheme BUDGET \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
@@ -59,7 +84,6 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
             PRODUCT_BUNDLE_IDENTIFIER=app.budget.local \
             build
 
