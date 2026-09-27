@@ -3,6 +3,9 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-test-ipa:
     runs-on: macos-15
@@ -87,7 +90,7 @@ jobs:
             PRODUCT_BUNDLE_IDENTIFIER=app.budget.local \
             build
 
-      - name: Package unsigned IPA
+      - name: Package BUDGET.ipa
         run: |
           set -euo pipefail
           APP_PATH=$(find derived -name 'BUDGET.app' -type d | head -n 1)
@@ -96,12 +99,33 @@ jobs:
           rm -rf Payload
           mkdir Payload
           cp -R "$APP_PATH" Payload/BUDGET.app
-          zip -r BUDGET-unsigned.ipa Payload
-          ls -lh BUDGET-unsigned.ipa
+          rm -f BUDGET.ipa
+          zip -r BUDGET.ipa Payload
+          test -s BUDGET.ipa
+          ls -lh BUDGET.ipa
+          python3 - << 'PY'
+          from pathlib import Path
+          ipa = Path("BUDGET.ipa")
+          size = ipa.stat().st_size
+          print(f"BUDGET.ipa size={size}")
+          if size < 10_000:
+              raise SystemExit("BUDGET.ipa is empty or too small")
+          PY
 
-      - name: Upload unsigned IPA
+      - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: BUDGET-unsigned-ipa
-          path: BUDGET-unsigned.ipa
+          name: BUDGET.ipa
+          path: BUDGET.ipa
           if-no-files-found: error
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0-build.${{ github.run_number }}
+          name: BUDGET v1.0.0 (build ${{ github.run_number }})
+          body: Unsigned iOS build of BUDGET from GitHub Actions run ${{ github.run_number }}.
+          files: BUDGET.ipa
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

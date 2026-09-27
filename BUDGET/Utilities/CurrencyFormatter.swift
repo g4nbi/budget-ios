@@ -28,7 +28,7 @@ enum CurrencyFormatter {
     static func string(from value: Decimal) -> String {
         let number = NSDecimalNumber(decimal: value)
         if let formatted = rupiah.string(from: number) {
-            return formatted.replacingOccurrences(of: "\u00a0", with: "")
+            return formatted.replacingOccurrences(of: "\u{00a0}", with: "")
                 .replacingOccurrences(of: " ", with: "")
         }
         return "Rp\(grouping.string(from: number) ?? "0")"
