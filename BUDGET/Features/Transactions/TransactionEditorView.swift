@@ -80,7 +80,7 @@ struct TransactionEditorView: View {
                         Button("Minta saran kategori AI") { confirmSendAI = true }
                     }
                     if aiBusy {
-                        Text("Meminta saran\u2026")
+                        Text("Meminta saran…")
                             .foregroundStyle(.secondary)
                     }
                     if !aiSuggestion.isEmpty {
