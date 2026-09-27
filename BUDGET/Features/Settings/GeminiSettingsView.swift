@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct GeminiSettingsView: View {
     @State private var keyText = ""
@@ -39,7 +40,7 @@ struct GeminiSettingsView: View {
                 Text("Kunci tidak pernah disimpan di SwiftData atau kode sumber. Aplikasi tetap berfungsi tanpa Gemini.")
             }
             if busy {
-                Section { Text("Menghubungi Gemini\u2026") }
+                Section { Text("Menghubungi Gemini…") }
             }
             if let status {
                 Section { Text(status) }
@@ -115,7 +116,7 @@ struct GeminiAskView: View {
                     Text("Data ringkas dari perangkat ini akan dikirim ke Gemini hanya setelah kamu mengonfirmasi.")
                 }
                 if busy {
-                    Text("Mengirim ke Gemini\u2026")
+                    Text("Mengirim ke Gemini…")
                 }
                 if let errorText {
                     Text(errorText).foregroundStyle(BudgetColor.expenseFallback)
