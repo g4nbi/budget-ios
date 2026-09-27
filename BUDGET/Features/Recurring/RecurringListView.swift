@@ -13,7 +13,7 @@ struct RecurringListView: View {
             if rules.isEmpty {
                 EmptyStateView(
                     title: "Belum ada transaksi berulang",
-                    message: "Aturan berulang tidak otomatis menjadi transaksi. Gunakan \u201cCatat sekarang\u201d jika item ini benar-benar terjadi.",
+                    message: "Aturan berulang tidak otomatis menjadi transaksi. Gunakan “Catat sekarang” jika item ini benar-benar terjadi.",
                     systemImage: "repeat",
                     actionTitle: "Tambah aturan",
                     action: { showEditor = true }
@@ -28,7 +28,7 @@ struct RecurringListView: View {
                             HStack {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(rule.title).foregroundStyle(.primary)
-                                    Text("\(rule.kind.title) \u00b7 \(rule.frequency.title) \u00b7 berikutnya \(DateFormatting.string(rule.nextDate))")
+                                    Text("\(rule.kind.title) · \(rule.frequency.title) · berikutnya \(DateFormatting.string(rule.nextDate))")
                                         .font(BudgetFont.caption())
                                         .foregroundStyle(.secondary)
                                 }
@@ -131,7 +131,7 @@ struct RecurringEditorView: View {
                     .environment(\.locale, Locale(identifier: "id_ID"))
                 Toggle("Aktif", isOn: $isActive)
             } footer: {
-                Text("Aturan ini tidak mencatat uang sampai kamu menekan \u201cCatat sekarang\u201d.")
+                Text("Aturan ini tidak mencatat uang sampai kamu menekan “Catat sekarang”.")
             }
             Section("Rekening") {
                 Picker("Rekening", selection: $accountID) {
