@@ -137,7 +137,7 @@ struct HomeView: View {
     private var spendableSection: some View {
         Section {
             if activeAccounts.isEmpty {
-                Text("Estimasi \u201cAman dibelanjakan\u201d muncul setelah ada rekening.")
+                Text("Estimasi “Aman dibelanjakan” muncul setelah ada rekening.")
                     .foregroundStyle(.secondary)
             } else if openIncome.isEmpty && openBills.isEmpty {
                 EmptyStateView(

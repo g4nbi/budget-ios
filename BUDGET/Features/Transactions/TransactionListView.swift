@@ -112,9 +112,9 @@ struct TransactionRow: View {
         let prefix: String
         switch item.kind {
         case .income, .refund: prefix = "+"
-        case .expense: prefix = "\u2212"
-        case .transfer: prefix = "\u2192"
-        case .adjustment: prefix = item.adjustmentIncrease ? "+" : "\u2212"
+        case .expense: prefix = "−"
+        case .transfer: prefix = "→"
+        case .adjustment: prefix = item.adjustmentIncrease ? "+" : "−"
         }
         if item.kind == .transfer {
             return CurrencyFormatter.string(from: item.amount)
